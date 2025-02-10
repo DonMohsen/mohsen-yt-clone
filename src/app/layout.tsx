@@ -8,6 +8,7 @@ import {
   SignedOut,
   UserButton
 } from '@clerk/nextjs'
+import { TRPCProvider } from "@/trpc/client";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,12 +31,17 @@ export default function RootLayout({
 }>) {
   return (
       <ClerkProvider>
+
     <html lang="en">
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+              <TRPCProvider>
+
+
         {children}
+              </TRPCProvider>
       </body>
     </html>
         </ClerkProvider>
