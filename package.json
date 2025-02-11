@@ -5,7 +5,7 @@
   "scripts": {
     "dev-all": "concurrently \"bun run dev:webhook\" \"bun run dev\" ",
     "dev": "next dev --turbopack",
-    "dev:webhook": "ngrok http --url=kit-tidy-duly.ngrok-free.app 3001",
+    "dev:webhook": "ngrok http --url=kit-tidy-duly.ngrok-free.app 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -27,6 +27,7 @@
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-error-boundary": "^5.0.0",
     "server-only": "^0.0.1",
     "superjson": "^2.2.2",
     "svix": "^1.45.1",
