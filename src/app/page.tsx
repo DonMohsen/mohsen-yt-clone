@@ -9,7 +9,7 @@ export default async function Home() {
   const data = await trpc.hello.prefetch({ text: "mohsenserver" });
   return (
     <HydrateClient>
-      {/* <UserButton /> */}
+      <UserButton />
       <Suspense fallback={<p>Loading............</p>}>
         <ErrorBoundary fallback={<p>Error</p>}>
           <PageClient />
